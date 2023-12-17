@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artilerija</title>
+    <link rel="stylesheet" href="css/artilerija.css">
+</head>
+<header>
+    <a href="index.html">
+        <img src="foto/logo.png" alt="Svetainės logotipas" id="logo">
+    </a>
+    <h1>TANKAI</h1>
+</header>
+<body>
+<main>
+    <div class="menu">
+        <form action="tankai.html" method="get">
+            <button type="submit" class="vehicle">TANKAI</button>
+        </form>
+        <form action="sraigtasparniai.html" method="get">
+            <button type="submit" class="vehicle">SRAIGTASPARNIAI</button>
+        </form>
+
+        <form action="artilerija.html" method="get">
+            <button type="submit" class="vehicle">ARTILERIJA</button>
+        </form>
+
+        <form action="priestankiniai.html" method="get">
+            <button type="submit" class="vehicle">PRIEŠTANKINIAI</button>
+        </form>
+
+        <form action="oro%20gynyba.html" method="get">
+            <button type="submit" class="vehicle">ORO GYNYBA</button>
+        </form>
+
+        <form action="inzinieriai.html" method="get">
+            <button type="submit" class="vehicle">INŽINIERIAI</button>
+        </form>
+
+        <form action="sarvuoti%20transporteriai.html" method="get">
+            <button type="submit" class="vehicle">ŠARVUOTI TRANSPORTERIAI</button>
+        </form>
+    </div>
+    <div class="container">
+        <button class="logout">
+            <img src="Foto/logout.png" alt="">
+        </button>
+        <button onclick="window.location.href='/profile'" class="profile">
+            <img src="Foto/login.png" alt="">
+        </button>
+        <h1 class="greeting"></h1>
+
+    </div>
+    <div class="tank-section">
+        <div>
+            <h2>Amerikiečių tankai</h2>
+            <div class="tank-list">
+                <div class="tank" onclick="viewTank('M1A1')">
+                    <img src="Foto/Tankai/M1A1.jpg" alt="">
+                    <div class="tank-name">M1A1</div>
+                </div>
+                <div class="tank" onclick="viewTank('M1A2')">
+                    <img src="Foto/Tankai/M1A2.jpg" alt="">
+                    <div class="tank-name">M1A2</div>
+                </div>
+                <div class="tank" onclick="viewTank('M60')">
+                    <img src="Foto/Tankai/M60.jpg" alt="">
+                    <div class="tank-name">M60</div>
+                </div>
+                <div class="tank" onclick="viewTank('M48')">
+                    <img src="Foto/Tankai/M48.jpg" alt="">
+                    <div class="tank-name">M48</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Rusijos Federacijos tankai</h2>
+            <div class="tank-list">
+                <div class="tank" onclick="viewTank('T-14')">
+                    <img src="Foto/Tankai/T-14.jpg" alt="">
+                    <div class="tank-name">T-14</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-90')">
+                    <img src="Foto/Tankai/T90.jpg" alt="">
+                    <div class="tank-name">T-90</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-80')">
+                    <img src="Foto/Tankai/T80.jpg" alt="">
+                    <div class="tank-name">T-80</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-72')">
+                    <img src="Foto/Tankai/T72.jpg" alt="">
+                    <div class="tank-name">T-72</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-64')">
+                    <img src="Foto/Tankai/T64.jpg" alt="">
+                    <div class="tank-name">T-64</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-62')">
+                    <img src="Foto/Tankai/T62.jpg" alt="">
+                    <div class="tank-name">T-62</div>
+                </div>
+                <div class="tank" onclick="viewTank('T-55')">
+                    <img src="Foto/Tankai/T55.jpg" alt="">
+                    <div class="tank-name">T-55</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="menu">
+        <input type="text" class="search-input" placeholder="Paieška........">
+        <form action="kontaktai.html" method="get">
+            <button type="submit" class="vehicle">KONTAKTAI</button>
+        </form>
+        <form action="naujienos.html" method="get">
+            <button type="submit" class="vehicle">NAUJIENOS</button>
+        </form>
+        <form action="taisykles.html" method="get">
+            <button type="submit" class="vehicle">TAISYKLĖS</button>
+        </form>
+        <form action="forumas.html" method="get">
+            <button type="submit" class="vehicle">FORUMAS</button>
+        </form>
+        <form action="apie%20mus.html" method="get">
+            <button type="submit" class="vehicle">APIE MUS</button>
+        </form>
+        <form action="zaidimas.html" method="get">
+            <button type="submit" class="vehicle">ŽAIDIMAS</button>
+        </form>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>Autoriaus teisės © 2023 Kariuomenės Technika | Interneto dizainą sukūrė Lukas Karalis</p>
+</footer>
+<script src="js/home.js"></script>
+</body>
+</html>

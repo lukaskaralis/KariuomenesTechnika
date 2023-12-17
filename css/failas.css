@@ -1,0 +1,51 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.vehicle {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-height: 80px;
+}
+#login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-height: 80px;
+}

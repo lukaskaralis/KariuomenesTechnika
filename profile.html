@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tankai</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<header>
+    <a href="index.html">
+        <img src="foto/logo.png" alt="Svetainės logotipas" id="logo">
+    </a>
+    <h1>PROFILIS</h1>
+</header>
+<body>
+<main>
+
+    <div class="menu">
+        <a href="Html/tankai.html" class="vehicle">TANKAI</a>
+        <button class="vehicle">SRAIGTASPARNIAI</button>
+        <button class="vehicle">ARTILERIJA</button>
+        <button class="vehicle">PRIEŠTANKINIAI</button>
+        <button class="vehicle">ORO GYNYBA</button>
+        <button class="vehicle">INŽINIERIAI</button>
+        <button class="vehicle">ŠARVUOTI TRANSPORTERIAI</button>
+    </div>
+    <div class="container">
+        <button class="logout">
+            <img src="Foto/logout.png" alt="">
+        </button>
+        <button onclick="window.location.href='/profile'" class="profile">
+            <img src="Foto/login.png" alt="">
+        </button>
+
+    </div>
+    <div class="info">
+        <h2></h2>
+    </div>
+    <div class="info">
+        <input type="text" placeholder="Vardas" autocomplete="off" class="name" value="<%= user.name %>" required>
+        <input type="text" placeholder="Pavardė" autocomplete="off" class="surname" value="<%= user.surname %>">
+        <input type="text" placeholder="Telefono numeris" autocomplete="off" class="phone" value="<%= user.phone %>">
+        <input type="text" placeholder="Adresas" autocomplete="off" class="address" value="<%= user.address %>">
+        <input type="text" placeholder="Amžius" autocomplete="off" class="age" value="<%= user.age %>">
+        <input type="email" placeholder="El. paštas" autocomplete="off" class="email" value="<%= user.email %>" required>
+        <button class="submit-btn">Išsaugoti</button>
+    </div>
+
+
+
+    <div class="menu">
+        <button class="vehicle">TANKAI</button>
+        <button class="vehicle">SRAIGTASPARNIAI</button>
+        <button class="vehicle">ARTILERIJA</button>
+        <button class="vehicle">PRIEŠTANKINIAI</button>
+        <button class="vehicle">ORO GYNYBA</button>
+        <button class="vehicle">INŽINIERIAI</button>
+        <button class="vehicle">ŠARVUOTI TRANSPORTERIAI</button>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>Autoriaus teisės © 2023 Kariuomenės Technika | Interneto dizainą sukūrė Lukas Karalis</p>
+</footer>
+<script src="js/profile.js"></script>
+<script src="js/home.js"></script>
+<script src="server.js"></script>
+</body>
+</html>

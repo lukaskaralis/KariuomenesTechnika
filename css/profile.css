@@ -1,0 +1,234 @@
+
+body{
+    background: url("../Foto/backgorund.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+header {
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: none;
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+}
+.menu{
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+    width: 350px;
+}
+.vehicle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: rgba(51, 51, 51, 0.8);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.vehicle:hover {
+    background-color: white;
+    color: #333333;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    background: none;
+    border-radius: 20px;
+}
+
+footer {
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Initially hide the footer */
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-height: 80px;
+}
+#login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-height: 80px;
+}
+
+.logout{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: black;
+    background: none;
+    size: 10px;
+}
+.logout img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+.info{
+    border-radius: 20px;
+    background-color: #333333;
+    position: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 700px;
+    height: auto;
+    color: #fff;
+    font-family: "Myriad Pro Light", "Harlow Solid Italic" ;
+    background-color: rgba(51, 51, 51, 0.8);
+    background-blend-mode: lighten;
+
+}
+.profile{
+    position: absolute;
+    top: 23px;
+    right: 70px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: black;
+    background: none;
+    size: 10px;
+}
+.profile img {
+    width: 55px;
+    height: 55px;
+    margin-right: 5px;
+}
+
+input{
+    width: 80%;
+    height: 15px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: #fff;
+    padding: 15px;
+    transition: .5s;
+}
+.submit-btn{
+    width: 80%;
+    height: 35px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: #fff;
+    padding: 15px;
+    transition: .5s;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+input:focus,
+.submit-btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+input:focus::placeholder{
+    color: #000;
+}
+
+.submit-btn{
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+    margin: 50px auto 0;
+}
+
+.link{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 30px auto;
+}
+
+.link:hover{
+    color: #fff;
+}
+
+.alert-box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: rgb(255, 119, 119);
+    border-top: 10px solid rgb(255, 37, 37);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+    transition: 0.5s;
+}
+.notification {
+    display: none;
+    position: absolute;
+    top: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification-text {
+    margin-right: 10px;
+}
+
+.close-button {
+    cursor: pointer;
+    font-size: 20px;
+}
+.search-input{
+    margin-top: 0;
+}
