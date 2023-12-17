@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1A1</title>
+    <link rel="stylesheet" href="Html/M1A1.css">
+</head>
+<header>
+    <a href="index.html">
+        <img src="foto/logo.png" alt="Svetainės logotipas" id="logo">
+    </a>
+    <h1>M1A1</h1>
+</header>
+<body>
+<main>
+    <div class="menu">
+        <form action="tankai.html" method="get">
+            <button type="submit" class="vehicle">TANKAI</button>
+        </form>
+        <form action="sraigtasparniai.html" method="get">
+            <button type="submit" class="vehicle">SRAIGTASPARNIAI</button>
+        </form>
+
+        <form action="artilerija.html" method="get">
+            <button type="submit" class="vehicle">ARTILERIJA</button>
+        </form>
+
+        <form action="priestankiniai.html" method="get">
+            <button type="submit" class="vehicle">PRIEŠTANKINIAI</button>
+        </form>
+
+        <form action="oro%20gynyba.html" method="get">
+            <button type="submit" class="vehicle">ORO GYNYBA</button>
+        </form>
+
+        <form action="inzinieriai.html" method="get">
+            <button type="submit" class="vehicle">INŽINIERIAI</button>
+        </form>
+
+        <form action="sarvuoti%20transporteriai.html" method="get">
+            <button type="submit" class="vehicle">ŠARVUOTI TRANSPORTERIAI</button>
+        </form>
+    </div>
+    <div class="container">
+        <button class="logout">
+            <img src="Foto/logout.png" alt="">
+        </button>
+        <button onclick="window.location.href='/profile'" class="profile">
+            <img src="Foto/login.png" alt="">
+        </button>
+        <h1 class="greeting"></h1>
+
+    </div>
+    <div class="tank-section">
+        <div>
+            <h2>M1A1 nuotraukos</h2>
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Larger Image">
+            </div>
+            <div class="tank-list">
+                <div class="tank" onclick="viewTank('Foto/Tankai/M1A1/priekis.jpg')">
+                    <img src="Foto/Tankai/M1A1/priekis.jpg" alt="">
+                    <div class="tank-name">Priekis</div>
+                </div>
+                <div class="tank" onclick="viewTank('Foto/Tankai/M1A1/kaire.jpg')">
+                    <img src="Foto/Tankai/M1A1/kaire.jpg" alt="">
+                    <div class="tank-name">Kairė pusė</div>
+                </div>
+                <div class="tank" onclick="viewTank('Foto/Tankai/M1A1/desine.jpg')">
+                    <img src="Foto/Tankai/M1A1/desine.jpg" alt="">
+                    <div class="tank-name">Dešinė pusė</div>
+                </div>
+                <div class="tank" onclick="viewTank('Foto/Tankai/M1A1/galas.jpg')">
+                    <img src="Foto/Tankai/M1A1/galas.jpg" alt="">
+                    <div class="tank-name">Galas</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>M1A1 specifikacija</h2>
+        </div>
+        <div class="info-container">
+            <div class="info-item">
+                <span class="info-label">Svoris</span>
+                <span class="info-value">61,4 tona</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Ilgis</span>
+                <span class="info-value">Su pabūklu pirmyn: 9,77 m<br>Korpusas: 7,93 m</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Plotis</span>
+                <span class="info-value">3,66 m</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Aukštis</span>
+                <span class="info-value">2,4 m</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Įgula</span>
+                <span class="info-value">4 žmonės (vadas, taikytojas, užtaisytojas, vairuotojas)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Šarvai</span>
+                <span class="info-value">Chobham tipo, vėlyvųjų modelių – su vidiniu nuskurdinto urano tinklu</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Pirminė ginkluotė</span>
+                <span class="info-value">120 mm M256 unitarinis pabūklas (M1A1, M1A2, M1A2 SEP)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Antrinė ginkluotė</span>
+                <span class="info-value">1 .50 kalibro (12,7 mm) M2HB sunkusis kulkosvaidis<br>2 M240 7,62 mm kulkosvaidžiai</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Variklis</span>
+                <span class="info-value">Honeywell AGT1500C daugiakuris turbininis variklis, 1500 AG (1119 kW)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Galios/Svorio santykis</span>
+                <span class="info-value">24,5 AG/Tonai</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Transmisija</span>
+                <span class="info-value">Allison DDA X-1100-3B</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Važiuoklė</span>
+                <span class="info-value">Torsiono</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Kuro talpa</span>
+                <span class="info-value">1908 l</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Veikimo nuotolis</span>
+                <span class="info-value">465,29 km<br>Su BBC sistema: 449,19 km</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Greitis</span>
+                <span class="info-value">Kelyje: 67,7 km/h<br>Bekelėje: 48,3 km/h</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="menu">
+        <input type="text" class="search-input" placeholder="Paieška........">
+        <form action="kontaktai.html" method="get">
+            <button type="submit" class="vehicle">KONTAKTAI</button>
+        </form>
+        <form action="naujienos.html" method="get">
+            <button type="submit" class="vehicle">NAUJIENOS</button>
+        </form>
+        <form action="taisykles.html" method="get">
+            <button type="submit" class="vehicle">TAISYKLĖS</button>
+        </form>
+        <form action="forumas.html" method="get">
+            <button type="submit" class="vehicle">FORUMAS</button>
+        </form>
+        <form action="apie%20mus.html" method="get">
+            <button type="submit" class="vehicle">APIE MUS</button>
+        </form>
+        <form action="zaidimas.html" method="get">
+            <button type="submit" class="vehicle">ŽAIDIMAS</button>
+        </form>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>Autoriaus teisės © 2023 Kariuomenės Technika | Interneto dizainą sukūrė Lukas Karalis</p>
+</footer>
+<script src="js/home.js"></script>
+<script src="js/tankai.js"></script>
+</body>
+</html>

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         notification.style.display = 'block';
         setTimeout(function () {
             hideNotification();
-        }, 3000); // Hide the notification after 3 seconds (adjust as needed)
+        }, 3000);
     }
 
     function hideNotification() {

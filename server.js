@@ -11,7 +11,7 @@ const {createTokens, validateToken} = require('./js/JWT');
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
+        host: 'localhost',
         user: 'postgres',
         password: 'admin',
         database: 'loginform'
@@ -131,7 +131,7 @@ app.get("/profile", validateToken, (req, res) => {
     const userId = req.user && req.user.id;
 
     if (!userId) {
-        return res.status(400).json({ error: "User ID not found in token" });
+        return res.status(400).json({ error: "Vartotojo ID nerastas tokenas" });
     }
     db.select('name', 'surname', 'email', 'phone', 'address', 'age')
         .from('users')
@@ -141,11 +141,11 @@ app.get("/profile", validateToken, (req, res) => {
             if (data.length) {
                 res.render('profile', { user: data[0] });
             } else {
-                res.status(404).json('User not found');
+                res.status(404).json('Vartotojas nerastas');
             }
         })
         .catch(err => {
-            res.status(500).json({ error: 'Internal Server Error' });
+            res.status(500).json({ error: 'Vidinė serverio klaida' });
         });
 });
 
@@ -162,12 +162,12 @@ app.post('/update-profile', validateToken, (req, res) => {
             phone: phone,
             address: address,
         })
-        .returning('*') // Return the updated user data
+        .returning('*')
         .then(updatedUserData => {
             res.json(updatedUserData[0]);
         })
         .catch(error => {
-            res.status(500).json({ error: 'Error updating profile' });
+            res.status(500).json({ error: 'Klaida atnaujinant profili' });
         });
 });
 

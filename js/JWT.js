@@ -19,7 +19,7 @@ const validateToken = (req, res, next) => {
 
     try {
         const decodedToken = verify(accessToken, "lukaskaralis");
-        req.user = decodedToken;  // Set req.user with the decoded token payload
+        req.user = decodedToken;
         return next();
     } catch (err) {
         return res.status(400).json({ error: 'Invalid token' });

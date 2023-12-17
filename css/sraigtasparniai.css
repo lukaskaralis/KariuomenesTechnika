@@ -228,7 +228,7 @@ h2{
     font-family: "Myriad Pro Light", "Harlow Solid Italic";
     color: white;
     text-transform: uppercase;
-    background-color: #333333; /* Your preferred background color */
-    padding: 10px; /* Adjust as needed */
+    background-color: #333333;
+    padding: 10px;
     border-radius: 5px;
 }

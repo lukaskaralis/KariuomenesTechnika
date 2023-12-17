@@ -40,11 +40,8 @@ main {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .vehicle:hover {
-    /* Change background color to a darker shade on hover */
     background-color: white;
-    /* Change text color on hover */
     color: #333333;
-    /* Change cursor to pointer on hover */
     cursor: pointer;
 }
 

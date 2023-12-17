@@ -1,4 +1,3 @@
-// form loading animation
 
 const form = [...document.querySelector('.form').children];
 
@@ -14,14 +13,12 @@ window.onload = () => {
     }
 }
 
-// form validation
-
 const name = document.querySelector('.name') || null;
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const submitBtn = document.querySelector('.submit-btn');
 
-if(name == null){ // means login page is open
+if(name == null){
     submitBtn.addEventListener('click', () => {
         fetch('/login-user',{
             method: 'post',
@@ -36,7 +33,7 @@ if(name == null){ // means login page is open
                 validateData(data);
             })
     })
-} else{ // means register page is open
+} else{
 
     submitBtn.addEventListener('click', () => {
         fetch('/register-user', {
