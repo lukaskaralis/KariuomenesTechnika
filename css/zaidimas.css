@@ -1,0 +1,193 @@
+body{
+    background: url("../Foto/backgorund.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+}
+header {
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: none;
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+}
+.menu{
+    font-family: "Myriad Pro Light", "Harlow Solid Italic";
+    width: 350px;
+}
+.vehicle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.vehicle:hover {
+    background-color: white;
+    color: #333333;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    background: none;
+    border-radius: 20px;
+}
+
+footer {
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-height: 80px;
+}
+#login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-height: 80px;
+}
+
+.logout{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: black;
+    background: none;
+    size: 10px;
+}
+.logout img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+.info{
+    border-radius: 20px;
+    background-color: #333333;
+    position: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.profile{
+    position: absolute;
+    top: 23px;
+    right: 70px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: black;
+    background: none;
+    size: 10px;
+}
+.profile img {
+    width: 55px;
+    height: 55px;
+    margin-right: 5px;
+}
+.greeting{
+
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    padding: 10px 20px;
+    border: black;
+    size: 10px;
+}
+.search-input{
+    margin-top: 0;
+}
+input{
+    width: 80%;
+    height: 15px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: #fff;
+    padding: 15px;
+    transition: .5s;
+}
+input::placeholder{
+    color: #fff;
+}
+
+input:focus,
+.submit-btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+input:focus::placeholder{
+    color: #000;
+}
+
+#quiz-container {
+    margin: 10px;
+    margin-top: 0;
+    position: relative;
+    max-width: 600px;
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #333333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#result-container {
+    margin-top: 20px;
+    position: center;
+}

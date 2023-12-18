@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(express.static(intialPath));
 app.use(cookieParser());
 
-
+module.exports = app;
 
 
 
@@ -172,9 +172,10 @@ app.post('/update-profile', validateToken, (req, res) => {
 });
 
 
-app.listen(3000, (req, res) => {
-    console.log('Port is open 3000.')
-})
 
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Port is open ${PORT}.`);
+});
 
 
