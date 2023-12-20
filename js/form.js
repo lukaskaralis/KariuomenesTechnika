@@ -1,23 +1,37 @@
-
 const form = [...document.querySelector('.form').children];
 
+/**
+ * Sukuriamas efektas, kad teksto įvedimo laukai atsirastu vienas po kito
+ */
 form.forEach((item, i) => {
     setTimeout(() => {
         item.style.opacity = 1;
     }, i*100);
 })
 
+/**
+ * Jei naudotojas yra prisijunges ir turi "sessionStorage.name" jis negalės grįžti į
+ * prisijungimo langą.
+ */
 window.onload = () => {
     if(sessionStorage.name){
         location.href = '/';
     }
 }
 
+/**
+ * Nuorodos į HTML elementus, kurie atitinka konkrečius elementus.
+ */
 const name = document.querySelector('.name') || null;
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const submitBtn = document.querySelector('.submit-btn');
 
+/**
+ * Jei "name" yra null, vykdomas pirmas blokas, kuriame naudojamas "/login-user" maršrutas,
+ * tada siunčiami duomenys JSON formatu funkcijai "validateData". Jei "name" nėra null, viskas vyksta
+ * taip pat tik maršrutas yra "/register-user".
+ */
 if(name == null){
     submitBtn.addEventListener('click', () => {
         fetch('/login-user',{
@@ -34,7 +48,6 @@ if(name == null){
             })
     })
 } else{
-
     submitBtn.addEventListener('click', () => {
         fetch('/register-user', {
             method: 'post',
@@ -50,9 +63,11 @@ if(name == null){
                 validateData(data);
             })
     })
-
 }
-
+/**
+ * Jei vartotojo duomenų trūksta arba yra neteisingi, rodomas klaidos pranešimas, jei teisingi
+ * duomenys yra išsaugomi.
+ */
 const validateData = (data) => {
     if(!data.name){
         alertBox(data);
@@ -62,7 +77,9 @@ const validateData = (data) => {
         location.href = '/';
     }
 }
-
+/**
+ * Funkcija kuri leidžia rodyti ir slėpti pranešimus naudotojui.
+ */
 const alertBox = (data) => {
     const alertContainer = document.querySelector('.alert-box');
     const alertMsg = document.querySelector('.alert');

@@ -7,7 +7,9 @@ const {hash} = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const {createTokens, validateToken} = require('./js/JWT');
 
-
+/**
+ * Duomenų bazės konfigūracija.
+ */
 const db = knex({
     client: 'pg',
     connection: {
@@ -18,34 +20,53 @@ const db = knex({
     }
 })
 
+/**
+ * Konfiguruojama Express.js programa.
+ */
 const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+/**
+ * Nustatomas pradinis kelias statiniams failams, pridedamas fukcionalumas JSON duomenims,.
+ */
 let intialPath = path.join(__dirname, "");
-
 app.use(bodyParser.json());
 app.use(express.static(intialPath));
 app.use(cookieParser());
-
 module.exports = app;
 
-
-
+/**
+ * Maršrutas skirtas grąžinti naudotojui pagrindinį HTML puslapį.
+ */
 app.get('/', (req, res) => {
     res.sendFile(path.join(intialPath, "index.html"));
 })
 
+/**
+ * Maršrutas skirtas grąžinti naudotojui prisijungimo HTML puslapį.
+ */
 app.get('/login', (req, res) => {
     res.sendFile(path.join(intialPath, "login.html"));
 })
 
+/**
+ * Maršrutas skirtas grąžinti naudotojui registracijos HTML puslapį.
+ */
 app.get('/register', (req, res) => {
     res.sendFile(path.join(intialPath, "register.html"));
 })
 
+/**
+ * Nustatoma kiek "salt" naudoti "bcrypt" algoritmui.
+ */
 const saltRounds = 10;
-
+/**
+ * Sukuriamas POST maršrutas. Paimami naudotojo įvesti duomenys, patikrinama ar visi reikalingi
+ * laukai yra užpildyti. Tikrinama ar el.pašto laukas turi @ ženklą. Užšifruojamas slaptažodis
+ * naudojant "bcrypt" algoritmą. Sukuriamas naujas įrašas į duomenų baze su naudotojo duomenimis
+ * ir suvaldomi duomenys, jeigu toks el.paštas jau yra duomenų bazėje.
+ */
 app.post('/register-user', (req, res) => {
     const { name, email, password } = req.body;
 
@@ -72,7 +93,6 @@ app.post('/register-user', (req, res) => {
                 if (err.detail.includes('Jau egzistuoja')) {
                     res.json('Elektroninis paštas jau egzsituoja');
                 } else {
-                    // Handle other errors, log them, or send a generic message
                     res.status(500).json('Elektroninis paštas jau egzsituoja');
                 }
             });
@@ -81,6 +101,13 @@ app.post('/register-user', (req, res) => {
     }
 });
 
+/**
+ * Sukuriamas POST maršrutas. Paimami naudotojo įvesti duomenys, tada duomenų bazėje ieškomas toks
+ * naudotojas. Jei naudotojas randamas iš duomenų paimamas slaptažodis ir atšifruojamas ir lyginamas
+ * su naudotojo įvestu. Jei netinka, gaunama klaida, jei tinka sukuriamas "accsessToken" naudojat naudotojo
+ * vardą ir ID. Nustatoma kiek slapukas galios. Gale sutvarkomos klaidos, jei slaptažodis arba el.paštas yra
+ * netinkamas.
+ */
 app.post('/login-user', (req, res) => {
     const { email, password } = req.body;
 
@@ -127,6 +154,12 @@ app.post('/login-user', (req, res) => {
         });
 });
 
+/**
+ * Sukuriamas GET maršrutas. "validateToken" tikrina ar pateiktas tinkamas tokenas ir autentifikuotas
+ * naudotojas. Jei tokenas yra netinkamas arba jo nėra, naudotojas gaus klaidos pranešimą. Duomenų bazėje ieškomas
+ * naudotojas pagal tokeno ID. Jei naudotojas randamas duomenys persiunčiami į HTML puslapį kur jis juos galės
+ * koreguoti, jei nėra tokio ID, grąžinama klaida.
+ */
 app.get("/profile", validateToken, (req, res) => {
     const userId = req.user && req.user.id;
 
@@ -149,6 +182,10 @@ app.get("/profile", validateToken, (req, res) => {
         });
 });
 
+/**
+ * Sukuriamas POST maršrutas. Nuskaitomi naudotojo įvesti duomenys ir jei duomenys yra teisingi jie
+ * išsaugomi duomenų bazėje.
+ */
 app.post('/update-profile', validateToken, (req, res) => {
     const userId = req.user.id;
 
@@ -171,8 +208,9 @@ app.post('/update-profile', validateToken, (req, res) => {
         });
 });
 
-
-
+/**
+ * Paleidžiamas serveris.
+ */
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Port is open ${PORT}.`);

@@ -1,4 +1,6 @@
-
+/**
+ * Funkcija kuri naudojama atnaujinti naudotojo profilio informaciją pagal įvestus duomenis.
+ */
 function saveProfile() {
     const name = document.querySelector('.name').value;
     const surname = document.querySelector('.surname').value;
@@ -23,6 +25,12 @@ function saveProfile() {
         .catch(error => {
         });
 }
+
+/**
+ * Yra skirta suteikti naudotojui vizualinį ryšį apie išsaugojimo rezultatą.
+ * Informacijos pranešimas atvaizduojamas skirtingomis spalvomis (žalia sėkmei, raudona klaidai)
+ * ir pasislepia po laiko.
+ */
 document.addEventListener('DOMContentLoaded', function () {
     const saveButton = document.getElementById('saveButton');
     const notification = document.getElementById('notification');

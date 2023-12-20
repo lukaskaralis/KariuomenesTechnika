@@ -98,7 +98,7 @@ describe('User Tests', () => {
     test('Sėkmingai užregistruoti naują vartotoją', async () => {
         const newUser = {
             name: 'JohnDoe',
-            email: 'john2@example.com',
+            email: 'john3@example.com',
             password: 'password123',
         };
         const response = await request(server)
