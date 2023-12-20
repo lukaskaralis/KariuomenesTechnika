@@ -1,3 +1,4 @@
+
 /**
  * Sukuriamas JWT naudojant vartotojo vardą ir ID. Taip pat tokenas yra užšifruoajmas
  */

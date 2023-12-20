@@ -1,3 +1,4 @@
+
 /**
  * Funkcija kuri tikrina ar naudotojo vardas yra įrašytas į "sessionStorage".
  * Jei taip grąžinamas pagrindinis langas su vartojo vardu, jei ne siunčiamas į prisijungimo

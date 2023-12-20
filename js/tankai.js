@@ -1,3 +1,4 @@
+
 /**
  * Funkcija skirta peradresuoti naudotoją į kitą puslapį.
  */
